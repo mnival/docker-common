@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x -v
-
-_DATE="$(date +"%Y%m%d")"
+_DATE="$(date +"%Y%m%d%H%M%S")"
 docker tag ${IMAGE_NAME} ${DOCKER_REPO}:${_DATE}
 docker push ${DOCKER_REPO}:${_DATE}
